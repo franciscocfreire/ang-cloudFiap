@@ -1,0 +1,14 @@
+<div *ngIf="aluno">
+    <h2>{{aluno.nomeAluno | uppercase}} Detalhes</h2>
+    <div><span>id:</span>{{aluno.idAluno}}</div>
+
+    <div>
+        <label>Nome:
+            <input [(ngModel)]="aluno.nomeAluno" placeholder="Nome do Aluno" />
+            <img [src]="aluno.foto" height="200" *ngIf="aluno.foto">
+        </label>
+        
+    </div>
+    <button (click)="save()">Salvar</button>
+    <button (click)="goBack()">Voltar</button>
+</div>

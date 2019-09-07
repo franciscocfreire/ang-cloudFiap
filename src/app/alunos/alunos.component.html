@@ -1,0 +1,39 @@
+<h2>Meus Alunos</h2>
+<div>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <label>
+            Id Aluno:
+            <input type="number" formControlName="idAluno" required>
+        </label>
+        <label>
+            Nome:
+            <input type="text" formControlName="nomeAluno" required>
+        </label>
+
+        <label>
+            Endereço:
+            <input type="text" formControlName="enderecoAluno">
+        </label>
+
+        <label>
+           Telefone:
+            <input type="number" formControlName="telefoneAluno">
+        </label>
+
+        <label>
+            Foto:
+            <input type="file" formControlName="foto" (change)="fileProgress($event)">
+        </label>
+
+        <button type="submit" [disabled]="!profileForm.valid">Adicionar</button>
+    </form>    
+
+</div>
+<ul class="alunos">
+    <li *ngFor="let aluno of alunos">
+        <a routerLink="/detail/{{aluno.idAluno}}">
+            <span class="badge">{{aluno.idAluno}}</span> {{aluno.nomeAluno}}
+        </a>
+        <button class="delete" title="Apagar Aluno" (click)="delete(aluno)">x</button>
+    </li>
+</ul>
