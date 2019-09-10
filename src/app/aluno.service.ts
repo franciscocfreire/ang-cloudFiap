@@ -12,8 +12,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class AlunoService {
 
-  //private domainUrl = 'https://maven-web-app-20190907161829150.azurewebsites.net' 
-  private domainUrl = 'https://maven-web-app-20190907161829150.azurewebsites.net/' 
+  private domainUrl = 'https://cloud-fiap.azurewebsites.net/' 
   private alunosUrl = 'aluno';
   private httpOptions = {
     headers: new HttpHeaders({

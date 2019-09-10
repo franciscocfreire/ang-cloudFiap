@@ -44,7 +44,7 @@ export class AlunosComponent implements OnInit {
 
   fileData = null;
 
-  private domainUrl = 'https://maven-web-app-20190907161829150.azurewebsites.net/' 
+  private domainUrl = 'https://cloud-fiap.azurewebsites.net/' 
   private resourceUrl = 'fileServe';
 
   onSubmit() {
